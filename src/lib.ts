@@ -1,4 +1,4 @@
-export const a= []
+
 export default class Todo {
   description: string;
   completed: boolean;
@@ -11,8 +11,8 @@ export default class Todo {
   toggle() {
     this.completed = !this.completed;
   }
-  add(){
-    a.push(this)
+  add(tasks:Todo[]){
+    tasks.push(this)
   }
 
   remove(tasks:Todo[]){
@@ -32,7 +32,7 @@ export default class Todo {
     for (let i=0; i<tasks.length; i++){
         mensaje += tasks[i].description +'/n '
     }
-    //arreglar mensaje
+
     return mensaje
 }
 }
